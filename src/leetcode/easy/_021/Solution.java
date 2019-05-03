@@ -1,6 +1,5 @@
 package leetcode.easy._021;
 
-import basic_ds.ListNode;
 
 public class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
