@@ -2,6 +2,7 @@ package leetcode.medium._098;
 
 import java.util.LinkedList;
 
+// 非递归写法
 public class SolutionByIterator {
     public boolean isValidBST(TreeNode root) {
         Long value = Long.MIN_VALUE;

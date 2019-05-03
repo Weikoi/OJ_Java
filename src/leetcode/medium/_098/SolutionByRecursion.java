@@ -1,7 +1,8 @@
 package leetcode.medium._098;
 
-public class SolutionByRecursion {
 
+// 递归写法
+public class SolutionByRecursion {
     Long value = Long.MIN_VALUE;
     public boolean isValidBST(TreeNode root) {
         if(root!=null) return true;
