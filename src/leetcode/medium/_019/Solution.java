@@ -11,7 +11,6 @@ package leetcode.medium._019;
 public class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
 
-        if(head.next==null || head==null) return null;
         ListNode fir =head;
         ListNode sec =head;
         while(n!=0){
