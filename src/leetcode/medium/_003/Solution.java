@@ -12,7 +12,7 @@ public class Solution {
         int lenOfS = s.length();
         int ans = 0;
         for (int i = 0; i < lenOfS; i++) {
-            for (int j = i; j < lenOfS; j++) {
+            for (int j = i; j <= lenOfS; j++) {
                 if (Unique(s, i, j)) {
                     ans = Math.max(ans, j - i);
                 }

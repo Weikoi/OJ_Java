@@ -6,8 +6,8 @@ package leetcode.medium._002;
 public class Solution {
     public static void main(String[] args) {
 
-    }
 
+    }
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode node = new ListNode(0);
         ListNode cur1 = l1, cur2 = l2, init = node;
@@ -29,6 +29,7 @@ public class Solution {
         if (sum / 10 != 0) init.next = new ListNode(1);
         return node.next;
     }
+
 }
 
 class ListNode {
