@@ -1,7 +1,5 @@
 package leetcode.medium._094;
 
-import sun.reflect.generics.tree.Tree;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -20,12 +18,9 @@ public class SolutionByIterator {
                 stack.push(pt.left);
                 pt = pt.left;
             }
-
-            while (!stack.isEmpty()) {
-                pt = stack.pop();
-                res.add(pt.val);
-                stack.push(pt.right);
-            }
+            pt = stack.pop();
+            res.add(pt.val);
+            stack.push(pt.right);
         }
         return res;
     }

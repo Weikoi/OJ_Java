@@ -7,6 +7,7 @@ public class Solution {
 
     public List<List<Integer>> threeSum(int[] nums) {
 
+        Arrays.sort(nums);
         int len = nums.length;
         List<List<Integer>> res = new ArrayList<>();
 
@@ -30,6 +31,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().threeSum(new int[]{-1, 0, 1, 2, -1, -4}));
+        System.out.println(new Solution().threeSum(new int[]{-2,0,3,-1,4,0,3,4,1,1,1,-3,-5,4,0}));
     }
 }
