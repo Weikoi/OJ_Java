@@ -8,29 +8,6 @@ import java.util.Set;
 
 //暴力法
 public class Solution {
-    public int lengthOfLongestSubstring(String s) {
-        int lenOfS = s.length();
-        int ans = 0;
-        for (int i = 0; i < lenOfS; i++) {
-            for (int j = i; j <= lenOfS; j++) {
-                if (Unique(s, i, j)) {
-                    ans = Math.max(ans, j - i);
-                }
-            }
-        }
-        return ans;
-    }
-
-    private boolean Unique(String s, int i, int j) {
-        HashSet<Character> set = new HashSet<>();
-        for (int k = i; k < j; k++) {
-            Character ch = s.charAt(k);
-            if (set.contains(ch))return false;
-            set.add(ch);
-        }
-        return true;
-    }
-
     //时间复杂度优化
     public int lengthOfLongestSubstring2(String s) {
         int n = s.length(), ans = 0;
