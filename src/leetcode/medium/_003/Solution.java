@@ -6,21 +6,26 @@ import java.util.Map;
 import java.util.Set;
 
 
-//暴力法
-public class Solution {
-    //时间复杂度优化
-    public int lengthOfLongestSubstring2(String s) {
-        int n = s.length(), ans = 0;
-        Map<Character, Integer> map = new HashMap<>(); // current index of character
-        // try to extend the range [i, j]
-        for (int j = 0, i = 0; j < n; j++) {
-            if (map.containsKey(s.charAt(j))) {
-                i = Math.max(map.get(s.charAt(j)), i);
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+
+        int l = 0, r = 0;
+        int res = 0;
+        Set<Character> set = new HashSet<>();
+
+        while (l < s.length() && r < s.length()) {
+            if (set.contains(s.charAt(r))) {
+
+                set.remove(s.charAt(l));
+                l++;
+            } else {
+                set.add(s.charAt(r));
+                r++;
             }
-            ans = Math.max(ans, j - i + 1);
-            map.put(s.charAt(j), j + 1);
+            if (res < (r - l)) res = r - l;
         }
-        return ans;
+        return res;
+
     }
 }
 
